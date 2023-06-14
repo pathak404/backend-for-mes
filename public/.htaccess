@@ -1,0 +1,30 @@
+RewriteEngine On
+Options -Indexes +FollowSymLinks
+
+ RewriteBase /
+ RewriteCond %{REQUEST_FILENAME} !-d
+ RewriteCond %{REQUEST_FILENAME} !-f
+ RewriteRule ^(.+)$ index.php [QSA,L]
+
+ RewriteRule .* - [E=HTTP_CONTENT_TYPE:%{HTTP:Content-Type}]
+ RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+ RewriteCond %{REQUEST_METHOD} OPTIONS
+ RewriteRule ^(.*)$ $1 [R=200,L]
+
+ RewriteRule ^\.htaccess$ - [F]
+
+
+ <IfModule mod_headers.c>
+     Header set X-Content-Type-Options "nosniff"
+     Header set X-XSS-Protection "1; mode=block"
+
+     Header always set Access-Control-Allow-Origin "*"
+     Header always set Access-Control-Allow-Headers "Authorization,X-API-KEY,Origin,X-Requested-With,Content-Type,Accept,Access-Control-Request-Method,Access-Control-Request-Headers"
+     Header always set Access-Control-Allow-Methods: "GET,POST,OPTIONS,DELETE,PUT"
+     Header always set Access-Control-Max-Age "600"
+     Header always unset X-Powered-By
+ </IfModule>
+
+
+

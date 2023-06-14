@@ -1,0 +1,26 @@
+{
+  "name": "2bytecoder/backend-for-mes",
+  "description": "API Backend for Mes management System",
+  "type": "project",
+  "require": {
+    "vlucas/phpdotenv": "^5.4",
+    "firebase/php-jwt": "^6.3",
+    "ext-pdo": "*",
+    "ext-json": "*",
+    "ext-openssl": "*",
+    "ext-fileinfo": "*",
+    "ext-curl": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "app\\": "app/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Abhishek Kumar Pathak",
+      "email": "officialabhishekpathak@gmail.com"
+    }
+  ],
+  "minimum-stability": "stable"
+}
