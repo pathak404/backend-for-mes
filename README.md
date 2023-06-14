@@ -8,7 +8,7 @@
 ![Build](https://img.shields.io/badge/test-pass-brightgreen)
 
 A custom PHP Framework with many features and minimal dependencies.
-This project provides backend support to [Mes Management System](https://github.com/2bytecoder/mes-management-system). 
+This project provides backend support to [Mes Management System](https://github.com/pathak404/mes-management-system). 
 
 
 
