@@ -72,7 +72,7 @@ Start the server
 #### Admin login
 
 ```http
-  GET /auth
+  POST /auth
 ```
 
 | Parameter | Type     | Description                |
